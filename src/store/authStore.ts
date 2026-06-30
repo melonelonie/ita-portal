@@ -21,31 +21,20 @@ interface AuthState {
   clearError: () => void;
 }
 
-const MOCK_USERS: Record<string, { password: string; user: User; token: string }> = {
-  'admin@initus.com': {
-    password: 'admin123',
-    user: {
-      id: '1',
-      name: 'Arjun Mehta',
-      email: 'admin@initus.com',
-      role: 'admin',
-      avatar: undefined,
-    },
-    token: 'mock-admin-jwt-token-xyz',
-  },
-  'ta@initus.com': {
-    password: 'ta123',
-    user: {
-      id: '2',
-      name: 'Priya Sharma',
-      email: 'ta@initus.com',
-      role: 'ta',
-      avatar: undefined,
-    },
-    token: 'mock-ta-jwt-token-abc',
-  },
-};
-
+/**
+ * Authentication Store
+ *
+ * Current implementation uses mock credentials from src/mock/data/mockAuth.ts
+ * for frontend development purposes.
+ *
+ * TODO: Replace the mock login logic below with a real API call:
+ *   const response = await fetch('/api/auth/login', {
+ *     method: 'POST',
+ *     headers: { 'Content-Type': 'application/json' },
+ *     body: JSON.stringify({ email, password }),
+ *   });
+ *   const data = await response.json();
+ */
 export const useAuthStore = create<AuthState>()(
   persist(
     (set) => ({
@@ -58,9 +47,13 @@ export const useAuthStore = create<AuthState>()(
       login: async (email: string, password: string) => {
         set({ isLoading: true, error: null });
 
-        // Simulate network delay
+        // TODO: Replace with real API call — POST /api/auth/login
+        // Simulated network delay for development UX
         await new Promise((resolve) => setTimeout(resolve, 1200));
 
+        // Dynamic import keeps mock data out of production bundles
+        // when tree-shaking is enabled and this code path is replaced.
+        const { MOCK_USERS } = await import('../mock/data/mockAuth');
         const mockEntry = MOCK_USERS[email.toLowerCase()];
 
         if (!mockEntry || mockEntry.password !== password) {

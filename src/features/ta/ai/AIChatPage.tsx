@@ -1,8 +1,19 @@
+import { Bot } from 'lucide-react';
+import ComingSoon from '../../../components/shared/ComingSoon';
+
 export default function AIChatPage() {
   return (
-    <div>
-      <h1 className="text-2xl font-bold text-zinc-100 mb-2">AI Chat</h1>
-      <p className="text-zinc-500">Chat with AI recruitment assistant.</p>
-    </div>
+    <ComingSoon
+      title="AI Recruitment Assistant"
+      description="This module will provide a conversational AI interface powered by LLM agents for recruitment workflows. Currently awaiting backend API and Claude integration."
+      icon={Bot}
+      details={[
+        'Natural language queries about candidates and pipelines',
+        'AI-assisted JR drafting from brief descriptions',
+        'Automated CV screening and candidate scoring',
+        'Pipeline stall detection and proactive alerts',
+        'Natural language report generation with export',
+      ]}
+    />
   );
 }
