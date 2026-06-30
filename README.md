@@ -4,7 +4,7 @@ An AI-native recruitment and talent acquisition management platform frontend bui
 
 ---
 
-## ⚠️ Current Project Status
+##  Current Project Status
 
 This project is currently a **frontend-only prototype**. 
 - **Database & Backend**: None.
@@ -14,7 +14,7 @@ This project is currently a **frontend-only prototype**.
 
 ---
 
-## 🔑 Demo Credentials
+##  Demo Credentials
 
 To explore the role-based portals, use the following credentials on the login screen:
 
@@ -25,7 +25,7 @@ To explore the role-based portals, use the following credentials on the login sc
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 This frontend is built using the following technologies:
 
@@ -43,7 +43,7 @@ This frontend is built using the following technologies:
 
 ---
 
-## 🌟 Features
+##  Features
 
 ### Currently Implemented
 - **Role-Based Dashboards**: Custom metrics, leaderboard, pipelines, and charts for both Admin and TA users.
@@ -63,7 +63,7 @@ This frontend is built using the following technologies:
 
 ---
 
-## 📂 Project Directory Structure
+##  Project Directory Structure
 
 ```
 ita-portal/
@@ -81,7 +81,7 @@ ita-portal/
 
 ---
 
-## 🚀 Setup Instructions
+##  Setup Instructions
 
 ### Prerequisites
 - Node.js (v18 or higher recommended)
@@ -109,7 +109,8 @@ ita-portal/
 
 ---
 
-## 📸 Screenshots & Previews
+## 
+Screenshots & Previews
 
 *(Placeholders: Add images or GIFs of the interface here)*
 - **Admin Dashboard**: Visual overview of team performance, metrics, and leaderboards.
